@@ -1,1 +1,40 @@
-
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 SHOP M8N FREEFIRE 🔥</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-banner">
+        <h1>🔥 SHOP M8N FREEFIRE 🔥</h1>
+        <p>Acc • Vòng Quay • Dịch Vụ VIP</p>
+    </div>
+    <section class="container">
+        <div class="box-theme">
+            <h2 class="neon-text">VÒNG QUAY KIM CƯƠNG</h2>
+            <div class="wheel-container">
+                <div class="wheel" id="wheel">
+                    <div class="segment" style="--i:1;--clr:#ff0055;"><span>50.000 KC</span></div>
+                    <div class="segment" style="--i:2;--clr:#00ccff;"><span>100 KC</span></div>
+                    <div class="segment" style="--i:3;--clr:#ffcc00;"><span>Acc VIP</span></div>
+                    <div class="segment" style="--i:4;--clr:#ff0055;"><span>5.000 KC</span></div>
+                    <div class="segment" style="--i:5;--clr:#00ccff;"><span>Trượt rồi</span></div>
+                    <div class="segment" style="--i:6;--clr:#ffcc00;"><span>500 KC</span></div>
+                </div>
+                <button class="btn-spin" onclick="spin()">QUAY</button>
+            </div>
+            <p id="msg" style="color:#ffcc00; font-weight:bold;"></p>
+        </div>
+    </section>
+    <script>
+        function spin() {
+            const w = document.getElementById('wheel');
+            document.getElementById('msg').innerText = "🌀 Đang quay...";
+            w.style.transform = `rotate(${Math.floor(Math.random() * 360) + 1800}deg)`;
+            setTimeout(() => { document.getElementById('msg').innerText = "🎉 Trúng 5.000 KC!"; }, 4000);
+        }
+    </script>
+</body>
+</html>
